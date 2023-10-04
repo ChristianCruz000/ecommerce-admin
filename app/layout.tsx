@@ -1,13 +1,17 @@
 import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
+import { REM } from "@next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
+import { ModalProvider } from "@/providers/modal-provider";
+
+const rem = REM({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard",
-  description: "Admin Dashboard",
+  title: "DOMPAX Admin Dashboard",
+  description: "DOMPAX Admin Dashboard",
 };
 
 export default function RootLayout({
@@ -18,7 +22,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={rem.className}>
+          <ModalProvider />
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
