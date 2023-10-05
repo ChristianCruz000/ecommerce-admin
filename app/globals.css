@@ -80,3 +80,10 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+.modal_background {
+  width: 100%;
+  height: 100%;
+  background-image: url("/packages.jpg");
+  object-fit: fill;
+}

@@ -6,4 +6,6 @@ This is a work-in-progress:
 - ~~Install Shadcn ui to use its components on the dashboard~~
 - ~~set up Clerk for authentication~~
 - ~~Switched Inter to REM (Google fonts)~~
-- ~~Install and set up modal component~~
+- ~~Install and setup modal component~~
+- ~~design forms with Shadcn ui~~
+- ~~Prisma and MySql database config~~
