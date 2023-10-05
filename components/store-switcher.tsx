@@ -71,16 +71,16 @@ export default function StoreSwitcher({
           className={cn("w-[200px] justify-between", className)}
         >
           <StoreIcon className="mr-2 h-5 w-5" />
-          Canasta CBA
+          {currentStore?.label}
           <ChevronsUpDown className="ml-auto h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
           <CommandList>
-            <CommandInput placeholder="Buscar producto..." />
-            <CommandEmpty>No store found.</CommandEmpty>
-            <CommandGroup heading="Canastas:">
+            <CommandInput placeholder="Search product..." />
+            <CommandEmpty>No product found.</CommandEmpty>
+            <CommandGroup heading="Stores:">
               {formattedItems.map((store) => (
                 <CommandItem
                   key={store.value}
@@ -111,7 +111,7 @@ export default function StoreSwitcher({
                 }}
               >
                 <PlusCircle className="mr-2 w-4 h-4" />
-                Crear canasta
+                Create store
               </CommandItem>
             </CommandGroup>
           </CommandList>

@@ -9,3 +9,4 @@ This is a work-in-progress:
 - ~~Install and setup modal component~~
 - ~~design forms with Shadcn ui~~
 - ~~Prisma and MySql database config~~
+- ~~Finished storeSwitcher component configuration~~
