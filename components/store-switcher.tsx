@@ -4,7 +4,7 @@ import {
   Check,
   ChevronsUpDown,
   PlusCircle,
-  Package as StoreIcon,
+  Warehouse as StoreIcon,
 } from "lucide-react";
 import { useState } from "react";
 import { Store } from "@prisma/client";
@@ -68,14 +68,14 @@ export default function StoreSwitcher({
           size="sm"
           aria-expanded={open}
           aria-label="Select a store"
-          className={cn("w-[200px] justify-between", className)}
+          className={cn("w-[235px] justify-between", className)}
         >
           <StoreIcon className="mr-2 h-5 w-5" />
           {currentStore?.label}
           <ChevronsUpDown className="ml-auto h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[200px] p-0">
+      <PopoverContent className="w-[235px] p-0">
         <Command>
           <CommandList>
             <CommandInput placeholder="Search product..." />

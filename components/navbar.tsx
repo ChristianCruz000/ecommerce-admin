@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 import { MainNav } from "@/components/main-nav";
 import StoreSwitcher from "@/components/store-switcher";
 import prismadb from "@/lib/prismadb";
+import { Button } from "./ui/button";
+import { MenuIcon } from "lucide-react";
 
 const Navbar = async () => {
   const { userId } = auth();
@@ -19,13 +21,16 @@ const Navbar = async () => {
   });
 
   return (
-    <div className="border-b">
-      <div className="flex h-16 items-center px-4 gap-9">
+    <div className="border-b bg-white">
+      <div className="flex h-16 items-center px-4 gap-6">
+        <Button className="md:hidden">
+          <MenuIcon className="w-4 h-4" />
+        </Button>
         <div className="logo">
           <img src="/dompax_logo.svg" width="100" />
         </div>
         <StoreSwitcher items={stores} />
-        <MainNav className="" />
+        <MainNav className="hidden lg:block" />
         <div className="ml-auto flex items-center space-x-4">
           <UserButton afterSignOutUrl="/" />
         </div>
