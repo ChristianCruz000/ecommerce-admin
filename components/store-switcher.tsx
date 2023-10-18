@@ -68,7 +68,7 @@ export default function StoreSwitcher({
           size="sm"
           aria-expanded={open}
           aria-label="Select a store"
-          className={cn("w-[235px] justify-between", className)}
+          className={cn("w-[260px] justify-between", className)}
         >
           <StoreIcon className="mr-2 h-5 w-5" />
           {currentStore?.label}
@@ -93,7 +93,7 @@ export default function StoreSwitcher({
                     className={cn(
                       "ml-auto h-4 w-4",
                       currentStore?.value === store.value
-                        ? "opcaity-100"
+                        ? "opcacity-100"
                         : "opacity-0"
                     )}
                   />
