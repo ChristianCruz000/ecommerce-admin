@@ -5,6 +5,7 @@ import { MainNav } from "@/components/main-nav";
 import StoreSwitcher from "@/components/store-switcher";
 import prismadb from "@/lib/prismadb";
 import { ThemeToggle } from "@/components/theme-toggle";
+import Image from "next/image";
 
 const Navbar = async () => {
   const { userId } = auth();
@@ -23,7 +24,7 @@ const Navbar = async () => {
     <div className="border-b">
       <div className="flex h-16 items-center px-4 gap-3">
         <div className="">
-          <img src="/admin_logo_vert.svg" width="36" />
+          <Image alt="logo" src="/admin_logo_vert.svg" />
         </div>
 
         <StoreSwitcher items={stores} />
