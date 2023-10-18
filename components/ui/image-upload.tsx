@@ -40,7 +40,7 @@ const imageUpload: React.FC<ImageUploadProps> = ({
         {value.map((url) => (
           <div
             key={url}
-            className="relative w-[200px] h-[200px] rounded-md overflow-hidden"
+            className="relative w-[320px] h-[200px] rounded-md overflow-hidden"
           >
             <div className="z-10 absolute top-2 right-2">
               <Button
@@ -65,8 +65,8 @@ const imageUpload: React.FC<ImageUploadProps> = ({
           return (
             <Button
               type="button"
-              disabled={disabled}
-              variant="secondary"
+              // disabled={disabled}
+              className="bg-sky-600"
               onClick={onClick}
             >
               <ImagePlus className="h-4 w-4 mr-2" />

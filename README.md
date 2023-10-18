@@ -10,3 +10,4 @@ This is a work-in-progress:
 - ~~design forms with Shadcn ui~~
 - ~~Prisma and MySql database config~~
 - ~~Finished storeSwitcher component configuration~~
+- ~~Create, Delete, Update billboards~~
